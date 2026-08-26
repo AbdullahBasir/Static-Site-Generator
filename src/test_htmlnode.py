@@ -1,7 +1,6 @@
 import unittest
 from htmlnode import HTMLNode
 
-
 class TestHTMLNode(unittest.TestCase):
     def test_props_to_html_single_prop(self):
         node = HTMLNode("a", "Click me", None, {"href": "https://boot.dev", "target": "_blank"})

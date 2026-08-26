@@ -16,3 +16,11 @@ class TestLeafNode(unittest.TestCase):
         self.assertIsNone(node.props)
         self.assertEqual(node.tag, "a")
         self.assertEqual(node.value, "click me")
+
+    def test_leaf_to_html_no_value_raises(self):
+        node = LeafNode("p", None)
+        with self.assertRaises(ValueError):
+            node.to_html()
+
+if __name__ == "__main__":
+    unittest.main()
