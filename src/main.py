@@ -1,8 +1,12 @@
-from textnode import TextNode, TextType
+from copystatic import static_to_public
+import os
 
 def main():
-    link_node = TextNode("click here", TextType.LINK, "https://www.boot.dev")
-    print(link_node)
+
+    project_dir = os.getcwd()
+    source_path = os.path.join(project_dir, "static")
+    dest_path = os.path.join(project_dir, "public")
+    static_to_public(source_path, dest_path)
 
 if __name__ == "__main__":
     main()
