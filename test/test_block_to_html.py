@@ -37,7 +37,7 @@ the **same** even with inline stuff
         self.assertEqual(result, expected)
 
     def test_quote(self):
-        md = ">First quoted line\n>Second quoted line"
+        md = ">First quoted line\n> Second quoted line"
         node = markdown_to_html_node(md)
         result = node.to_html()
         expected = "<div><blockquote>First quoted line\nSecond quoted line</blockquote></div>"

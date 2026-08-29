@@ -28,7 +28,7 @@ def markdown_to_html_node(markdown: str) -> HTMLNode:
             case BlockType.QUOTE:
                 text = []
                 for line in block.split("\n"):
-                    text.append(line.strip(">"))
+                    text.append(line.strip("> "))
                 stripped = "\n".join(text)
                 outer_div.append(ParentNode(tag="blockquote", children=text_to_children(stripped)))
 
